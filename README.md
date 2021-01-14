@@ -45,7 +45,7 @@ Performing quantitative analysis (using Python/Pandas) on different Investment M
     annualized_std_df = daily_std_df * np.sqrt(252)
 
 #### Annualized Standard Deviations:
-![ann_std_table](/Screenshots/ann_std_table.png?raw=true)
+![annual_std_table](/Screenshots/annual_std_table.png?raw=true)
 #### We see here that both Tiger Global Management and Berkshire Hathaway have higher annualized standard deviations than S&P 500 returns.
 
 
