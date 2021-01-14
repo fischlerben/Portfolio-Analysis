@@ -15,6 +15,16 @@ Performing quantitative analysis (using Python/Pandas) on different Investment M
     sp500_daily_returns.dropna(inplace=True)
 
 
+```
+# Calculate S&P 500 daily returns using .pct_change() function:
+sp500_daily_returns = sp500_history_df.pct_change()
+
+# Rename column:
+sp500_daily_returns.columns = ["S&P 500 Daily Returns"]
+
+# Drop nulls:
+sp500_daily_returns.dropna(inplace=True)
+```
 
 
 
