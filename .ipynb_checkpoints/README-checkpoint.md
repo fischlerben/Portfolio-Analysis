@@ -3,6 +3,8 @@
 
 Performing quantitative analysis (using Python/Pandas) on different Investment Management firm portfolios, algorithmic returns and returns based on the S&P 500 closing price to determine which is performing the best across areas such as volatility, risk and Sharpe ratios.  Data based on a 4-year timeframe from 2015-2019.  Investment Management Firm portfolios analyzed include Soros Fund Management LLC, Paulson & Co. Inc., Tiger Global Management LLC and Berkshire Hathaway LLC.  These metrics are then visualized using matplotlib.
 
+## Summary
+
 ### While the Investment Management Firm dataset and the Algorithmic dataset already had "daily returns" data before being loading into the notebook, the S&P 500 dataset had only "returns" as the data.  Therefore, it was necessary to convert this to "daily returns" by using the ".pct_change()" function:
 
     # Calculate S&P 500 daily returns using .pct_change() function:
@@ -14,18 +16,13 @@ Performing quantitative analysis (using Python/Pandas) on different Investment M
     # Drop nulls:
     sp500_daily_returns.dropna(inplace=True)
 
+### After loading in the separate dataframes and cleaning the data, I concatenated them into one dataframe to make working with the numbers easier:
+![concatenated_df](/Screenshots/concatenated_df.png?raw=true)
 
-```
-# Calculate S&P 500 daily returns using .pct_change() function:
-sp500_daily_returns = sp500_history_df.pct_change()
+#### Now, with this dataframe of simple daily returns, we can do a great deal of Portfolio Analysis.
 
-# Rename column:
-sp500_daily_returns.columns = ["S&P 500 Daily Returns"]
-
-# Drop nulls:
-sp500_daily_returns.dropna(inplace=True)
-```
-
+### Plotting Daily Returns:
+![daily_returns_graph](/Screenshots/daily_returns_graph.png?raw=true)
 
 
 
